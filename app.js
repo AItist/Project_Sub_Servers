@@ -145,7 +145,8 @@ app.get('/init', (req, res) => {
     start_process(path, 0)
     
     path = get_path(12);
-    start_process(path, 12)
+    start_process(path, 12);
+    res.send('init');
 });
 
 app.listen(PORT, () => {
