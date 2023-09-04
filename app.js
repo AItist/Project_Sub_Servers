@@ -15,6 +15,15 @@ const PORT = 3001;
 let processes = {};
 let debugProgramPath = 'D:\\Projects\\Project_Sub_Servers\\hello.bat';
 
+function get_path(id) {
+    if (id == 1) {
+        return debugProgramPath;
+    }
+    else {
+        return '';
+    }
+}
+
 function start_process(filePath, id) {
     if (id in processes && processes[id]['isRunning']) {
         return false;
@@ -64,10 +73,7 @@ app.get('/', (req, res) => {
 app.get('/start/:id', (req, res) => {
     const id = req.params.id;
 
-    let path = '';
-    if (id == 1) {
-        path = debugProgramPath;
-    }
+    let path = get_path(id);
 
     if (start_process(path, id)) {
         res.send(`Process ${id} started`);
