@@ -15,7 +15,7 @@ const PORT = 3002;
 let processes = {};
 let debugProgramPath = 'D:\\Projects\\Project_Sub_Servers\\hello.bat';
 
-let p21_path = debugProgramPath;
+let p21_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\Run_Scene1.bat';
 
 function get_path(id) {
     switch(id) {

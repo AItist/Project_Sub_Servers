@@ -1,6 +1,6 @@
 @REM start cmd /k "D: && cd \"
 
-start "Window1" cmd.exe /k "D: && cd \Projects\P0_Webcam_AI_v2 && conda activate AItist && python main_webcam.py --index 0"
+start "Window1" cmd.exe /k "D: && cd \FiniteLoop\Scene1 && conda activate AItist && You_are_already_Dead_Main_Scene1.exe"
 
 
 @REM 웹캠 8060
