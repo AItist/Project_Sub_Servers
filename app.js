@@ -34,7 +34,7 @@ function get_path(id) {
         case '3':
             return p3_path;
 
-        case '1':
+        case '9':
             return debugProgramPath;
         
         case '11':
