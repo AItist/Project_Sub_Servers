@@ -131,6 +131,14 @@ app.get('/status/:id', (req, res) => {
     res.send(isRunning ? `Process ${id} is running` : `Process ${id} is not running`);
 });
 
+app.get('/h', (req, res) => {
+    var document = `
+    <h1>Help</h1>
+    <p>31, 32: AI, P3D</p>
+    <p>0, 1, 2, 3: Webcam 0, 1, 2, 3</p>`;
+    res.send(document);
+}); 
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
