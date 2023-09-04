@@ -15,6 +15,11 @@ const PORT = 3001;
 let processes = {};
 let debugProgramPath = 'D:\\Projects\\Project_Sub_Servers\\hello.bat';
 
+let p31_path = '';
+let p32_path = '';
+let p33_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub3\\RunCam0.bat';
+let p34_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub3\\RunCam1.bat';
+
 function get_path(id) {
     switch(id) {
         case 1:
