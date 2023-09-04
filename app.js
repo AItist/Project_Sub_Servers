@@ -135,7 +135,7 @@ app.get('/status/:id', (req, res) => {
 app.get('/h', (req, res) => {
     var document = `
     <h1>Help</h1>
-    <p>21, 22: Scene 1, 2</p>
+    <p>11, 12: Scene 1, 2</p>
     <p>0, 1, 2, 3: Webcam 0, 1, 2, 3</p>`;
     res.send(document);
 }); 
