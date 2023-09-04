@@ -140,6 +140,14 @@ app.get('/h', (req, res) => {
     res.send(document);
 }); 
 
+app.get('/init', (req, res) => {
+    path = get_path(0);
+    start_process(path, 0)
+    
+    let path = get_path(12);
+    start_process(path, 12)
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
