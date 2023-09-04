@@ -16,6 +16,7 @@ let processes = {};
 let debugProgramPath = 'D:\\Projects\\Project_Sub_Servers\\hello.bat';
 
 let p21_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\Run_Scene1.bat';
+let p22_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\Run_Scene2.bat';
 
 function get_path(id) {
     switch(id) {
@@ -24,6 +25,8 @@ function get_path(id) {
         
         case '21':
             return p21_path;
+        case '22':
+            return p22_path;
 
         case 31:
             return '';
