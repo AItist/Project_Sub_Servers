@@ -1,0 +1,1 @@
+start "Window1" cmd.exe /k "echo hello"
