@@ -17,17 +17,9 @@ let debugProgramPath = 'D:\\Projects\\Project_Sub_Servers\\hello.bat';
 
 function get_path(id) {
     switch(id) {
-        case 1:
+        case '1':
             return debugProgramPath;
         
-        case 31:
-            return '';
-        case 32:
-            return '';
-        case 33:
-            return '';
-        case 34:
-            return '';
 
         default:
             return debugProgramPath;
