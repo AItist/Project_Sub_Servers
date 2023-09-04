@@ -15,11 +15,16 @@ const PORT = 3001;
 let processes = {};
 let debugProgramPath = 'D:\\Projects\\Project_Sub_Servers\\hello.bat';
 
+let p11_path = debugProgramPath;
+
 function get_path(id) {
     switch(id) {
         case 1:
             return debugProgramPath;
         
+        case '11':
+            return p11_path;
+
         case 31:
             return '';
         case 32:
