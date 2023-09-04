@@ -141,10 +141,10 @@ app.get('/h', (req, res) => {
 }); 
 
 app.get('/init', (req, res) => {
-    let path = get_path(21);
-    start_process(path, 21);
-    path = get_path(1);
-    start_process(path, 1);
+    let path = get_path('21');
+    start_process(path, '21');
+    path = get_path('1');
+    start_process(path, '1');
     res.send('init');
 });
 
