@@ -12,39 +12,44 @@ const PORT = 3001;
 // 3000 4번 컴퓨터(메인)에서 할것
 // - middle, merge, Webcam 2개
 
-let process;
-let isRunning = false;
-
+let processes = {};
 let debugProgramPath = 'D:\\Projects\\Project_Sub_Servers\\hello.bat';
 
-function start_process(filePath) {
-    if (!isRunning) {
-        process = exec(filePath, (error, stdout, stderr) => {
-            if (error) {
-                console.error(`exec error: ${error}`);
-                return;
-            }
-            // console.log(`stdout: ${stdout}`);
-            // console.error(`stderr: ${stderr}`);
-        });
-
-        process.on('exit', (code) => {
-            console.log(`Child exited with code ${code}`);
-            process = null;
-            isRunning = false;
-        });
-
-        isRunning = true;
-        return true;
-    }
-    else {
+function start_process(filePath, id) {
+    if (id in processes && processes[id]['isRunning']) {
         return false;
-    }
+    } 
+
+    let dict = {};
+    process = exec(filePath, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`exec error: ${error}`);
+            return;
+        }
+        // console.log(`stdout: ${stdout}`);
+        // console.error(`stderr: ${stderr}`);
+    });
+
+    dict['process'] = process;
+    dict['isRunning'] = true;
+    processes[id] = dict;
+
+    process.on('exit', (code) => {
+        console.log(`Child exited with code ${code}`);
+        processes[id]['isRunning'] = false;
+        processes[id]['process'] = null;
+        // process = null;
+        // isRunning = false;
+    });
+
+    return true;
 }
 
-function stop_process(_process) {
-    if (_process) {
-        _process.kill();
+function stop_process(id) {
+    if (id in processes && processes[id]['isRunning']) {
+        processes[id]['process'].kill();
+        processes[id]['process'] = null;
+        processes[id]['isRunning'] = false;
         return true;
     }
     else {
@@ -58,9 +63,13 @@ app.get('/', (req, res) => {
 
 app.get('/start/:id', (req, res) => {
     const id = req.params.id;
-    console.log(`id : ${id}`);
 
-    if (start_process(debugProgramPath)) {
+    let path = '';
+    if (id == 1) {
+        path = debugProgramPath;
+    }
+
+    if (start_process(path, id)) {
         res.send(`Process ${id} started`);
     }
     else {
@@ -70,12 +79,9 @@ app.get('/start/:id', (req, res) => {
 
 app.get('/stop/:id', (req, res) => {
     const id = req.params.id;
-    console.log(`id : ${id}`);
 
-    if (stop_process(process)) {
+    if (stop_process(id)) {
         res.send(`Process ${id} killed`);
-        process = null;
-        isRunning = false;
     }
     else {
         res.send(`Process ${id} not found`);
@@ -84,7 +90,15 @@ app.get('/stop/:id', (req, res) => {
 
 app.get('/status/:id', (req, res) => {
     const id = req.params.id;
-    console.log(`id : ${id}`);
+    // console.log(`id : ${id}`);
+
+    let isRunning = false;
+    if (id in processes && processes[id]['isRunning']) {
+        isRunning = true;
+    }
+    else {
+        isRunning = false;
+    }
 
     res.send(isRunning ? `Process ${id} is running` : `Process ${id} is not running`);
 });
