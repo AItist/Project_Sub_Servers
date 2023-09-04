@@ -18,10 +18,10 @@ let debugProgramPath = 'D:\\Projects\\Project_Sub_Servers\\hello.bat';
 let p21_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\Run_Scene1.bat';
 let p22_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\Run_Scene2.bat';
 
-let p0_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub3\\RunCam0.bat';
-let p1_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub3\\RunCam1.bat';
-let p2_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub3\\RunCam2.bat';
-let p3_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub3\\RunCam3.bat';
+let p0_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\RunCam0.bat';
+let p1_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\RunCam1.bat';
+let p2_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\RunCam2.bat';
+let p3_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\RunCam3.bat';
 
 function get_path(id) {
     switch(id) {
