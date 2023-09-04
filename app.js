@@ -139,6 +139,15 @@ app.get('/h', (req, res) => {
     res.send(document);
 }); 
 
+app.get('/init', (req, res) => {
+    let path = get_path(31);
+    start_process(path, 31);
+    // path = get_path(32);
+    // start_process(path, 32);
+    path = get_path(2);
+    start_process(path, 2);
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
