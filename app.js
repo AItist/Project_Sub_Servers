@@ -1,7 +1,7 @@
 const express = require('express');
 const { exec } = require('child_process');
 const app = express();
-const PORT = 3001;
+const PORT = 3004;
 
 // 3001 1번 컴퓨터에서 할것
 // - Scene2 프로그램 실행, 종료, 상태 확인
@@ -15,11 +15,28 @@ const PORT = 3001;
 let processes = {};
 let debugProgramPath = 'D:\\Projects\\Project_Sub_Servers\\hello.bat';
 
+let p41_path = 'D:\\Projects\\Project_Sub_Servers\\p41_P0_AI.bat';
+let p42_path = 'D:\\Projects\\Project_Sub_Servers\\p42_P2_middle.bat';
+let p43_path = 'D:\\Projects\\Project_Sub_Servers\\p43_P4_merge.bat';
+let p45_path = 'D:\\Projects\\Project_Sub_Servers\\RunCam2.bat';
+let p46_path = 'D:\\Projects\\Project_Sub_Servers\\RunCam3.bat';
+
 function get_path(id) {
     switch(id) {
         case '1':
             return debugProgramPath;
         
+        case '41':
+            return p41_path;
+        case '42':
+            return p42_path;
+        case '43':
+            return p43_path;
+        case '45':
+            return p45_path;
+        case '46':
+            return p46_path;
+
 
         default:
             return debugProgramPath;
