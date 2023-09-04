@@ -19,10 +19,10 @@ let p41_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub4\\p41_P0_AI.bat';
 let p42_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub4\\p42_P2_middle.bat';
 let p43_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub4\\p43_P4_merge.bat';
 
-let p0_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub3\\RunCam0.bat';
-let p1_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub3\\RunCam1.bat';
-let p2_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub3\\RunCam2.bat';
-let p3_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub3\\RunCam3.bat';
+let p0_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub4\\RunCam0.bat';
+let p1_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub4\\RunCam1.bat';
+let p2_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub4\\RunCam2.bat';
+let p3_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub4\\RunCam3.bat';
 
 function get_path(id) {
     switch(id) {
