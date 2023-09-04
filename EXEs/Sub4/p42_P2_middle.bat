@@ -1,6 +1,6 @@
 @REM start cmd /k "D: && cd \"
 
-start "Window1" cmd.exe /k "D: && cd \Projects\P0_Webcam_AI_v2 && conda activate AItist && python main_webcam.py --index 0"
+start "Window1" cmd.exe /k "D: && cd \Projects\P2_middle_operator && conda activate AItist && python main.py --sAddr 192.168.50.50 --sPort 8071 --debug 1"
 
 
 @REM 웹캠 8060
