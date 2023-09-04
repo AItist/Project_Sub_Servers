@@ -111,6 +111,10 @@ app.get('/status/:id', (req, res) => {
     res.send(isRunning ? `Process ${id} is running` : `Process ${id} is not running`);
 });
 
+app.get('/init', (req, res) => {
+    
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
