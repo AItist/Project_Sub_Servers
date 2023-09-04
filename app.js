@@ -1,7 +1,7 @@
 const express = require('express');
 const { exec } = require('child_process');
 const app = express();
-const PORT = 3001;
+const PORT = 3003;
 
 // 3001 1번 컴퓨터에서 할것
 // - Scene2 프로그램 실행, 종료, 상태 확인
@@ -15,24 +15,24 @@ const PORT = 3001;
 let processes = {};
 let debugProgramPath = 'D:\\Projects\\Project_Sub_Servers\\hello.bat';
 
-let p31_path = '';
+let p31_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub3\\Run_AI.bat';
 let p32_path = '';
 let p33_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub3\\RunCam0.bat';
 let p34_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub3\\RunCam1.bat';
 
 function get_path(id) {
     switch(id) {
-        case 1:
+        case '1':
             return debugProgramPath;
         
-        case 31:
-            return '';
-        case 32:
-            return '';
-        case 33:
-            return '';
-        case 34:
-            return '';
+        case '31':
+            return p31_path;
+        case '32':
+            return p32_path;
+        case '33':
+            return p33_path;
+        case '34':
+            return p34_path;
 
         default:
             return debugProgramPath;
@@ -62,8 +62,6 @@ function start_process(filePath, id) {
         console.log(`Child exited with code ${code}`);
         processes[id]['isRunning'] = false;
         processes[id]['process'] = null;
-        // process = null;
-        // isRunning = false;
     });
 
     return true;
