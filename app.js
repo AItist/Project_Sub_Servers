@@ -148,8 +148,8 @@ app.get('/init', (req, res) => {
     start_process(path, '42');
     path = get_path('43');
     start_process(path, '43');
-    path = get_path('3');
-    start_process(path, '3');
+    path = get_path('2');
+    start_process(path, '2');
     res.send('init');
 });
 
