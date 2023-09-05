@@ -15,7 +15,6 @@ const PORT = 3004;
 let processes = {};
 let debugProgramPath = 'D:\\Projects\\Project_Sub_Servers\\hello.bat';
 
-let p41_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub4\\p41_P0_AI.bat';
 let p42_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub4\\p42_P2_middle.bat';
 let p43_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub4\\p43_P4_merge.bat';
 
@@ -38,8 +37,6 @@ function get_path(id) {
         case '9':
             return debugProgramPath;
         
-        case '41':
-            return p41_path;
         case '42':
             return p42_path;
         case '43':
