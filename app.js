@@ -147,16 +147,17 @@ app.get('/status/:id', (req, res) => {
 app.get('/h', (req, res) => {
     var document = `
     <h1>Help</h1>
-    <p>21, 22: Scene 1, 2</p>
+    <p>11, 12, 13: Scene 1, 1 Vertical, 1 YAAD</p>
+    <p>14, 15, 16: Scene 2, 2 Vertical, 2 YAAD</p>
     <p>0, 1, 2, 3: Webcam 0, 1, 2, 3</p>`;
     res.send(document);
 }); 
 
 app.get('/init', (req, res) => {
-    let path = get_path('21');
-    start_process(path, '21');
-    path = get_path('1');
-    start_process(path, '1');
+    let path = get_path('12');
+    start_process(path, '12');
+    path = get_path('3');
+    start_process(path, '3');
     res.send('init');
 });
 
