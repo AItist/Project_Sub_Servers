@@ -15,13 +15,17 @@ const PORT = 3002;
 let processes = {};
 let debugProgramPath = 'D:\\Projects\\Project_Sub_Servers\\hello.bat';
 
-let p21_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\Run_Scene1.bat';
-let p22_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\Run_Scene2.bat';
+let p11_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\Run_Scene1.bat';
+let p12_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\Run_Scene1_Vertical.bat';
+let p13_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\Run_Scene1_YAAD.bat';
+let p14_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\Run_Scene2.bat';
+let p15_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\Run_Scene2_Vertical.bat';
+let p16_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\Run_Scene2_YAAD.bat';
 
-let p0_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\RunCam0.bat';
-let p1_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\RunCam1.bat';
-let p2_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\RunCam2.bat';
-let p3_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub2\\RunCam3.bat';
+let p0_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\RunCam0.bat';
+let p1_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\RunCam1.bat';
+let p2_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\RunCam2.bat';
+let p3_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\RunCam3.bat';
 
 function get_path(id) {
     switch(id) {
@@ -37,10 +41,18 @@ function get_path(id) {
         case '9':
             return debugProgramPath;
         
-        case '21':
-            return p21_path;
-        case '22':
-            return p22_path;
+        case '11':
+            return p11_path;
+        case '12':
+            return p12_path;
+        case '13':
+            return p13_path;
+        case '14':
+            return p14_path;
+        case '15':
+            return p15_path;
+        case '16':
+            return p16_path;
 
         default:
             return debugProgramPath;
