@@ -3,3 +3,5 @@ start /min "Window1" cmd.exe /k "D: && cd \Projects\Project_Sub_Servers\EXEs\Sub
 echo "RunCam1 started"
 start /min "Window1" cmd.exe /k "D: && cd \Projects\Project_Sub_Servers\EXEs\Sub3 && Run_AI.bat && exit"
 echo "Run_AI started"
+start /min "Window1" cmd.exe /k "D: && cd \Projects\Project_Sub_Servers\EXEs\Sub3 && Run_P3D.bat && exit"
+echo "Run_AI started"
