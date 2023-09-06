@@ -142,8 +142,8 @@ app.get('/h', (req, res) => {
 app.get('/init', (req, res) => {
     let path = get_path('31');
     start_process(path, '31');
-    // path = get_path('32');
-    // start_process(path, '32');
+    path = get_path('32');
+    start_process(path, '32');
     path = get_path('1');
     start_process(path, '1');
     res.send('init');
