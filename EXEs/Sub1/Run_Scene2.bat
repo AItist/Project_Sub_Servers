@@ -1,6 +1,6 @@
 @REM start cmd /k "D: && cd \"
 
-start /min "Window1" cmd.exe /k "D: && cd \FiniteLoop\FiniteLoop_Scene2 && conda activate AItist && FiniteLoop_Scene2.exe"
+start /min "Window1" cmd.exe /k "D: && cd \FiniteLoop\FiniteLoop_Scene2 && conda activate AItist && FiniteLoop_Scene2.exe && exit"
 
 
 @REM 웹캠 8060

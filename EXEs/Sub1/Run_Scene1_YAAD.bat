@@ -1,6 +1,6 @@
 @REM start cmd /k "D: && cd \"
 
-start /min "Window1" cmd.exe /k "D: && cd \FiniteLoop\FiniteLoop_Scene1_YAAD && FiniteLoop_Scene1.exe"
+start /min "Window1" cmd.exe /k "D: && cd \FiniteLoop\FiniteLoop_Scene1_YAAD && FiniteLoop_Scene1.exe && exit"
 
 @REM 웹캠 8060
 @REM P3D 8072
