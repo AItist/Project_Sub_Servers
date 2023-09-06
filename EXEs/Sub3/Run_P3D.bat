@@ -1,6 +1,6 @@
 @REM start cmd /k "D: && cd \"
 
-start /min "Window1" cmd.exe /k "D: && cd \Projects\P4_Websocket_P3D\Build && P4_Websocket_P3D.exe"
+start /min "Window1" cmd.exe /k "D: && cd \Projects\P4_Websocket_P3D\Build && P4_Websocket_P3D.exe && exit"
 
 
 @REM 웹캠 8060
