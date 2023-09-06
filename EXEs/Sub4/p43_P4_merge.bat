@@ -1,6 +1,6 @@
 @REM start cmd /k "D: && cd \"
 
-start "Window1" cmd.exe /k "D: && cd \Projects\P4_Image_Merge2 && conda activate AItist && python main.py --sAddr 192.168.50.50 --sPort 8073 --debug 1"
+start /min "Window1" cmd.exe /k "D: && cd \Projects\P4_Image_Merge2 && conda activate AItist && python main.py --sAddr 192.168.50.50 --sPort 8073 --debug 1"
 
 
 @REM 웹캠 8060

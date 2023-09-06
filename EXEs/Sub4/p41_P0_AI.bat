@@ -1,6 +1,6 @@
 @REM start cmd /k "D: && cd \"
 
-start "Window1" cmd.exe /k "D: && cd \Projects\P0_AI && conda activate AItist && python main.py --index 0"
+start /min "Window1" cmd.exe /k "D: && cd \Projects\P0_AI && conda activate AItist && python main.py --index 0"
 
 
 @REM 웹캠 8060
