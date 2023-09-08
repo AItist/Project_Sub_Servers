@@ -22,6 +22,8 @@ let p14_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\Run_Scene2.bat';
 let p15_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\Run_Scene2_Vertical.bat';
 let p16_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\Run_Scene2_YAAD.bat';
 
+let p90_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\Kill_Scenes.bat';
+
 let p0_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\RunCam0.bat';
 let p1_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\RunCam1.bat';
 let p2_path = 'D:\\Projects\\Project_Sub_Servers\\EXEs\\Sub1\\RunCam2.bat';
@@ -53,6 +55,9 @@ function get_path(id) {
             return p15_path;
         case '16':
             return p16_path;
+
+        case '90':
+            return p90_path;
 
         default:
             return debugProgramPath;
