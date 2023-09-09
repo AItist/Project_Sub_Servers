@@ -1,6 +1,6 @@
 @REM start cmd /k "D: && cd \"
 
-start /min "Window1" cmd.exe /k "taskkill /F /IM FiniteLoop_Scene1.exe && exit"
+@REM start /min "Window1" cmd.exe /k "taskkill /F /IM FiniteLoop_Scene1.exe && exit"
 start /min "Window1" cmd.exe /k "taskkill /F /IM FiniteLoop_Scene2.exe && exit"
 
 @REM 웹캠 8060
